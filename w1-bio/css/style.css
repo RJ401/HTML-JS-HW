@@ -21,9 +21,14 @@ h2{
 hr{
     color: black;
 }
+.schools-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 .centered-list{
     list-style-position: inside;
-    text-align: center;
+    text-align: left;
     padding: 0;
     padding-bottom: 15px;
     margin: 0 auto;
