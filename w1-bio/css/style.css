@@ -18,6 +18,9 @@ body{
 h2{
     text-align: center;
 }
+hr{
+    color: black;
+}
 .centered-list{
     list-style-position: inside;
     text-align: center;
@@ -52,6 +55,7 @@ h2{
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 200px;
 }
 .website-container {
     display: flex;
