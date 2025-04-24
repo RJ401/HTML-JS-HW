@@ -115,55 +115,71 @@
     font-size: 0.9rem;
     color: #ddd;
   }
+
+  .clickable-img {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    border-radius: 8px;
+  }
   
+  .clickable-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+
   /* =========================
-     Cast Section
+     Trailer Section
   ========================= */
-  .cast-section {
+  .trailer-section {
     padding: 3rem 2rem;
     background: linear-gradient(to bottom, #000022, #000);
     text-align: center;
   }
   
-  .cast-section h2 {
+  .trailer-section h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
   }
   
-  .cast-section .highlight {
+  .trailer-section .highlight {
     color: #ffcc00;
   }
   
   .trilogy-banner img {
-    max-width: 600px;
+    max-width: 200px;
     width: 100%;
     margin: 2rem auto;
     display: block;
   }
   
-  .cast-section h3 {
+  .trailer-section h3 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
     color: #00ccff;
   }
   
-  .cast-grid {
+  .trailer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
     padding: 0 2rem;
   }
   
-  .cast-member img {
-    width: 100%;
-    border-radius: 8px;
-    border: 2px solid #00ccff;
-  }
-  
-  .cast-member p {
+  .trailer-video p {
     margin-top: 0.5rem;
     color: #fff;
     font-weight: bold;
+  }
+
+  .trailer-video iframe {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    border: 2px solid #00ccff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* =========================
