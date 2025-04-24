@@ -1,196 +1,166 @@
-/* Basic Layound for all Elements */
-/* Selects all elements on the page */
-* { 
-    /* removes default margins applied */
-    margin: 0;
-    /* removes default padding applied */
-    padding: 0;
-    /* Makes width/height calculations also include padding and borders */
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    /* increases vertical spacing between lines of text */
-    line-height: 1.6;
-    background-image: url("../images/background/BTTFfanArt.jpg"); 
-    /* Makes background image cover the whole screen, by stretching or cropping */
-    background-size: cover;
-    /* keeps image edge to edge */
-    background-attachment: fixed;
-  }
-  
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  line-height: 1.6;
+  background-image: url("../images/background/BTTFfanArt.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /* Header */
 .site-header {
-    position: relative;
-    background-color: black;
-    height: 100px;
-    display: flex;
-    justify-content: center; /* Center nav horizontally */
-    align-items: center;
-  }
-  
-.site-header .logo {
-    height: 60px;
-    width: auto;
-  }
-  
-.site-header .corner-logo {
-    height: 60px;
-    width: auto;
-  }
-  
-.main-nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }  
-  
-.main-nav a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-.main-nav a:hover {
-    color: #ff6600;
-  }
+  position: relative;
+  background-color: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo,
+.corner-logo {
+  height: 60px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .logo {
-    position: absolute;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60px;
-  }
-  
+  left: 2rem;
+}
+
 .corner-logo {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60px;
-    display: block;
-  }
-  
-  /* =========================
-     Destination Section
-  ========================= */
-  .destination-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: rgba(0, 0, 0, 0.85);
-  }
-  
-  .destination-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #ffcc00;
-  }
-  
-  .movies {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .movie {
-    max-width: 300px;
-    text-align: left;
-  }
-  
-  .movie img {
-    width: 100%;
-    border: 2px solid #fff;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .movie p {
-    font-size: 0.9rem;
-    color: #ddd;
-  }
+  right: 2rem;
+  display: block;
+}
 
-  .clickable-img {
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  
-  .clickable-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  }
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
 
-  /* =========================
-     Trailer Section
-  ========================= */
-  .trailer-section {
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #000022, #000);
-    text-align: center;
-  }
-  
-  .trailer-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .trailer-section .highlight {
-    color: #ffcc00;
-  }
-  
-  .trilogy-banner img {
-    max-width: 200px;
-    width: 100%;
-    margin: 2rem auto;
-    display: block;
-  }
-  
-  .trailer-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    color: #00ccff;
-  }
-  
-  .trailer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    padding: 0 2rem;
-  }
-  
-  .trailer-video p {
-    margin-top: 0.5rem;
-    color: #fff;
-    font-weight: bold;
-  }
+.main-nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
-  .trailer-video iframe {
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    border: 2px solid #00ccff;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* =========================
-     Footer
-  ========================= */
-  .site-footer {
-    background-color: #111;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.85rem;
-    color: #999;
-  }
-  
+.main-nav a:hover {
+  color: #ff6600;
+  transform: scale(1.05)
+}
+
+/* Destination Section */
+.destination-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.destination-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffcc00;
+}
+
+.movies {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.movie {
+  max-width: 300px;
+  text-align: left;
+}
+
+.movie img {
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.movie p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.clickable-img {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.clickable-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Trailer Section */
+.trailer-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #000022, #000);
+  text-align: center;
+}
+
+.trailer-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.trailer-section .highlight {
+  color: #ffcc00;
+}
+
+.trailer-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #00ccff;
+}
+
+.trailer-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10rem; 
+  padding: 0 2rem;
+}
+
+.trailer-video p {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.trailer-video iframe {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 2px solid #00ccff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #999;
+}
