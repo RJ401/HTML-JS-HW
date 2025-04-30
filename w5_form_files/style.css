@@ -1,4 +1,31 @@
 
-table, tr, td{
+tbody{
+  background-image: url(images/HBD.jpg);
+}
+
+table, tr, td, th{
+  text-shadow: 1px 1px 1px #750392;
+  font-weight: bolder;
   border:1px solid black;
+}
+
+table{
+  background-color: #b36987;
+}
+#submit-button-wrapper{
+  padding-top: .66em;
+  padding-bottom: .66em;
+  text-align: center;
+}
+
+#submit-button{
+  background-color: #b36987;
+  transform: scale(1.25);
+  text-shadow: 1px 1px 1px #750392;
+  font-weight: bolder;
+}
+
+.sub-header{
+  padding-top: .66em;
+  padding-bottom: .66em;
 }
