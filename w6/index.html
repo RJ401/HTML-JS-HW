@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Raymond Hebert">
+        <meta name="description" content="Week 6 In Document JS Pay Calculator">
+
+        <title>Week 6 | JavaScript | In Document Pay Calculator</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    
+    <body>
+        <script>
+            
+            var hourlyPay = Number(prompt("Please enter your hourly wage.\nPLease use dollars and cents ($00.00):", "14.50"));
+            var hoursPweek = Number(prompt("Please enter the number of hours worked this week\nYou may enter whole numbers or decimals.:", "32"));
+            const tax = .20;
+            var grossPay = hourlyPay * hoursPweek * 2;
+            var taxedIncome = grossPay * taxRate;
+            var netPay = grossPay - taxedIncome;
+            
+            alert(
+                "Your gross pay is: $" + grossPay.toFixed(2)
+            );
+
+            console.log("Hourly Pay: $" + hourlyPay.toFixed(2))
+            console.log("Hours per week: " + hoursPweek.toFixed(2))
+            console.log("Net pay after taxes: $" + netPay.toFixed(2))
+
+        </script>
+    </body>
+</html>
