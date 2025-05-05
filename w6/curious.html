@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Raymond Hebert">
+        <meta name="description" content="Week 6 In Document JS Pay Calculator">
+
+        <title>YOU PASSED</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <h1>CURIOSITY TEST</h1>
+        <h2 id="counter">PASSED TEST COUNTER: 0</h2>
+        <h3>"The important thing is not to stop questioning. Curiosity has its own reason for existing." - Albert Einstein</h3>
+
+        <script>
+
+            const count = localStorage.getItem("passCount") || 0;
+            document.getElementById("counter").textContent = "PASSED TEST COUNTER: " + count;
+
+        </script>
+    </body>
+</html>
