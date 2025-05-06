@@ -68,7 +68,7 @@
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector().addEventListener(`click`, alertName)
+        document.querySelector('#enter-button').addEventListener('click', alertName);
         
         
 
@@ -76,30 +76,36 @@
         {
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
 
-            /*USE THE FOLLOWING VARIABLE NAMES:
-            fname --> first name, #first
-            lname --> last name, #last
-            hours --> hours worked, #hours
-            rate --> hourly rate, #rate */
-            
+            // THIS WAS A MULTI-LINE COMMENT BUT IT WAS BREAKING SOMETHING IN MY VSC (EITHER BUILT IN LOGIC OR PERHAPS AN EXTENSION) AND CAUSING THE NAMES TO BE INTERPRETED LIKE VARIABLES.
 
+            //USE THE FOLLOWING VARIABLE NAMES:
+            //fname --> first name, #first
+            //lname --> last name, #last
+            //hours --> hours worked, #hours
+            //rate --> hourly rate, #rate
+        
+            let fname = document.querySelector('#first').value;
+            let lname = document.querySelector('#last').value;
+            let hours = document.querySelector('#hours').value;
+            let rate = document.querySelector('#rate').value;
 
             //console.log() all four values
             
-            console.log()
-            console.log()
-            console.log()
-            console.log()
+            console.log(fname);
+            console.log(lname);
+            console.log(hours);
+            console.log(rate);
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            var full 
+            let full = `${fname} ${lname}`;
 
             //console.log() the full name value
-            console.log()
+            console.log(full);
 
 
             //convert both hours and rate to Number() data types
-            
+            hours = parseFloat(hours);
+            rate = parseFloat(rate);
 
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
