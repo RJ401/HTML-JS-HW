@@ -18,6 +18,7 @@
                 button.style.marginTop = "40px";
                 button.style.padding = "10px 20px";
                 button.style.fontSize = "32px";
+
                 // COUNTER ANON FUNC FOR MAGIC BUTTON
                 button.onclick = function () {
                     let count = Number(localStorage.getItem("passCount")) || 0;
@@ -25,26 +26,28 @@
                     localStorage.setItem("passCount", count);
                     window.location.href = "curious.html";
                 };
+
                 // ADD BUTTON TO PAGE
                 document.body.appendChild(button);
 
-                // ON LOAD WINDOW ANON FUNCTION W/ 300 MS DELAY TO SHOW THE TEMPTING BUTTON BEFORE RUNNING CALC PROMPTS
+                // ON LOAD WINDOW ANON FUNCTION W/ 900 MS DELAY TO SHOW THE TEMPTING BUTTON BEFORE RUNNING CALC PROMPTS
                 window.onload = function () {
                     setTimeout(() => {
                         // calc stuff here
-                        // these should be "let" and not "var" for anti leak, since they are within a function, but I will keep var for the calculator part because that is what class has taught so far
+                        // I believe these should be "let" and not "var" for anti leak, since they are within a function, but I will keep var for the calculator part because that is what class has taught so far
                         var hourlyPay = Number(prompt("Please enter your hourly wage,\nin USD ($00.00).", "14.50"));
                         var hoursPweek = Number(prompt("Please enter the number of hours worked this week.\nYou may enter a whole number or decimal.", "32"));
                         const tax = .20;
+
                         var grossPay = hourlyPay * hoursPweek * 2;
                         var taxedIncome = grossPay * tax;
                         var netPay = grossPay - taxedIncome;
                         
-                        alert("Gross Pay: $" + grossPay.toFixed(2) + "\n" + "Taxes Paid: $" + taxedIncome.toFixed(2) + "\n" + "Net Pay after Taxes: $" + netPay.toFixed(2));
+                        alert(`Gross Pay: $${grossPay.toFixed(2)}\nTaxes Paid: $${taxedIncome.toFixed(2)}\nNet Pay after Taxes: $${netPay.toFixed(2)}`);
 
-                        console.log("Gross Pay: $" + grossPay.toFixed(2))
-                        console.log("Taxes Paid: " + taxedIncome.toFixed(2))
-                        console.log("Net pay after taxes: $" + netPay.toFixed(2))
+                        console.log(`Gross Pay: $${grossPay.toFixed(2)}`)
+                        console.log(`Taxes Paid: ${taxedIncome.toFixed(2)}`)
+                        console.log(`Net pay after taxes: $${netPay.toFixed(2)}`)
                     }, 900);
                 };
         </script>
