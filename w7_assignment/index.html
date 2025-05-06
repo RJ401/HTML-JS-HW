@@ -56,7 +56,7 @@
         <br>
 
         <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="enter-button" value="Enter" style="margin-left: 10em">
+        <input type="button" id="enter-button" value="Enter" style="margin-left: 10em;">
 
         <br>
         <br>
@@ -77,14 +77,16 @@
                 *clicking the below button will trigger a call to the submitNow()
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-        <input type="button" id="submit" value="SUBMIT" style="margin-left: 10em">
+        <input type="submit" id="submit" value="SUBMIT" style="margin-left: 10em;">
     </form>
 
     <script>
+        let fname, lname, full, hours, rate, gross, taxAmount, net;
         //edit the below statement to select the #enter-button id from the HTML file
         document.querySelector('#enter-button').addEventListener('click', alertName);
-        
-        
+        //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
+        //when the #submit button is clicked, the submitNow function should run
+        document.querySelector('#submit').addEventListener('click', submitNow);
 
         function alertName(e)
         {
@@ -98,10 +100,10 @@
             //hours --> hours worked, #hours
             //rate --> hourly rate, #rate
         
-            let fname = document.querySelector('#first').value;
-            let lname = document.querySelector('#last').value;
-            let hours = document.querySelector('#hours').value;
-            let rate = document.querySelector('#rate').value;
+            fname = document.querySelector('#first').value;
+            lname = document.querySelector('#last').value;
+            hours = document.querySelector('#hours').value;
+            rate = document.querySelector('#rate').value;
 
             //console.log() all four values
             
@@ -111,7 +113,7 @@
             console.log(rate);
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
-            let full = `${fname} ${lname}`;
+            full = `${fname} ${lname}`;
 
             //console.log() the full name value
             console.log(full);
@@ -127,9 +129,9 @@
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
             const tax = .20; 
-            let gross = hours * rate * 2;
-            let taxAmount = gross * tax;
-            let net = gross - taxAmount;
+            gross = hours * rate * 2;
+            taxAmount = gross * tax;
+            net = gross - taxAmount;
 
             //console.log() all three processed values, rounded to the second decimal place
             console.log(
@@ -159,19 +161,15 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.querySelector('#submit').addEventListener('click', submitNow);
-        
-            function submitNow(e)
-            {
-
-                /*NOTE FOR TESTING:
-                    *if written correctly, you will see an alert() with all info entered as well as processed!*/
-
-                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`);
-            }
-            
+            //document.querySelector('#submit').addEventListener('click', submitNow);
         }
         
+        function submitNow(e)
+            {
+                /*NOTE FOR TESTING:
+                    *if written correctly, you will see an alert() with all info entered as well as processed!*/
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`);
+            }
     </script>
     
 </body>
