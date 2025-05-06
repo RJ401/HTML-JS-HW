@@ -17,32 +17,47 @@
    <!--each <input> must have an id that matches its corresponding label -->
    <!--each form element is separated by a break space (new line) -->
     <form>
-        <label for="first">First Name: </label>
-        <input type="text" id="firstName">
+        <table>
+            <tr>
+                <td>
+                    <label for="first">First Name: </label>
+                </td>
+                <td>
+                    <input type="text" id="first">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="last">Last Name: </label>
+                </td>
+                <td>
+                    <input type="text" id="last">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hours">Hours Worked: </label>
+                </td>
+                <td>
+                    <input type="text" id="hours">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="rate">Hourly Rate: </label>
+                </td>
+                <td>
+                    <input type="text" id="rate">
+                </td>
+            </tr>
+        </table>
 
         <br>
 
-        <label for="last">Last Name: </label>
-        <input type="text" id="lastName">
-
         <br>
-
-        <label for="hours">Hours Worked: </label>
-        <input type="text" id="hoursWorked">
-
-        <br>
-
-        <label for="rate">Hourly Rate: </label>
-        <input type="text" id="hoursRate">
-
-        <br>
-
-        <br>
-
-
 
         <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
-        <input type="button" id="enter-button" value="Enter">
+        <input type="button" id="enter-button" value="Enter" style="margin-left: 10em">
 
         <br>
         <br>
@@ -63,7 +78,7 @@
                 *clicking the below button will trigger a call to the submitNow()
                 *success will be determined if correct info is displayed in the alert()-->
         <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-        <input type="button" id="submit" value="SUBMIT">
+        <input type="button" id="submit" value="SUBMIT" style="margin-left: 10em">
     </form>
 
     <script>
@@ -113,7 +128,7 @@
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
             const tax = .20; 
-            let gross = hours * rate;
+            let gross = hours * rate * 2;
             let taxAmount = gross * tax;
             let net = gross - taxAmount;
 
