@@ -34,14 +34,13 @@
                 window.onload = function () {
                     setTimeout(() => {
                         // calc stuff here
-                        // I believe these should be "let" and not "var" for anti leak, since they are within a function, but I will keep var for the calculator part because that is what class has taught so far
-                        var hourlyPay = Number(prompt("Please enter your hourly wage,\nin USD ($00.00).", "14.50"));
-                        var hoursPweek = Number(prompt("Please enter the number of hours worked this week.\nYou may enter a whole number or decimal.", "32"));
+                        let hourlyPay = Number(prompt("Please enter your hourly wage,\nin USD ($00.00).", "14.50"));
+                        let hoursPweek = Number(prompt("Please enter the number of hours worked this week.\nYou may enter a whole number or decimal.", "32"));
                         const tax = .20;
 
-                        var grossPay = hourlyPay * hoursPweek * 2;
-                        var taxedIncome = grossPay * tax;
-                        var netPay = grossPay - taxedIncome;
+                        let grossPay = hourlyPay * hoursPweek * 2;
+                        let taxedIncome = grossPay * tax;
+                        let netPay = grossPay - taxedIncome;
                         
                         alert(`Gross Pay: $${grossPay.toFixed(2)}\nTaxes Paid: $${taxedIncome.toFixed(2)}\nNet Pay after Taxes: $${netPay.toFixed(2)}`);
 
