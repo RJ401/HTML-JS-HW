@@ -133,7 +133,7 @@
             let info = document.querySelector('#info');
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
-            let num = document.querySelector('#check')
+            let num = document.querySelector('#check');
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
             info.innerHTML = finalMessage;
@@ -145,7 +145,7 @@
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            document.querySelector('#submit').addEventListener('click', submitNow)
+            document.querySelector('#submit').addEventListener('click', submitNow);
         
             function submitNow(e)
             {
@@ -153,7 +153,7 @@
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
-                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`);
             }
             
         }
