@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name ="description=" content="Week 9 homework assignment">
+<meta name="author" content ="Raymond Hebert">
+
+<title>Week 9 Files</title>
+
+<style type="text/css">
+	.border{
+    border:1px solid black;
+    padding: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+  /*
+  var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	];
+  */
+	const people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	];
+	
+  people.forEach((person, index) => {
+    const { first, last, credit } = person;
+  //for (let i=0; i< people.length; i++) {}
+  // let person = people[i];
+
+    const div = document.createElement("div");
+    div.className = "border";
+    div.id = `person${index}`;
+    // let tempDiv = document.createElement("div");
+    // tempDiv.setAttribute("id", String(i));
+    // div.setAttribute("class", "border");
+    // div.setAttribute("id", "person" + index);
+
+    const firstP = document.createElement("p");
+    firstP.textContent = `First Name: ${first}`;
+
+    const lastP = document.createElement("p");
+    lastP.textContent = `Last Name: ${last}`;
+
+    const creditP = document.createElement("p");
+    creditP.textContent = `Known for: ${credit}`;
+
+    div.append(firstP, lastP, creditP);
+    //div.appendChild(firstP);
+    //div.appendChild(lastP);
+    //div.appendChild(creditP);
+
+    document.body.append(div);
+    //document.body.appendChild(div);
+  });
+</script>
+
+</html>
