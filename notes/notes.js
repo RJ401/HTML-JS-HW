@@ -16,7 +16,9 @@ people.forEach((person, index) => {
   Loops through the people array, giving you:
   person = each object in the array
   index = the number (0, 1, 2)
-  
+
   legacy 
   for (let i = 0; i < people.length; i++) {
   const person = people[i];
+
+  */
